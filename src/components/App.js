@@ -1,4 +1,4 @@
-// @flow strict-local
+// @flow
 import 'typeface-roboto';
 import WbSunnyIcon  from '@material-ui/icons/WbSunny';
 import IconButton from '@material-ui/core/IconButton';
