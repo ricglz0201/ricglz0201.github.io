@@ -1,12 +1,12 @@
 // @flow
 import 'typeface-roboto';
-import WbSunnyIcon  from '@material-ui/icons/WbSunny';
-import IconButton from '@material-ui/core/IconButton';
-import React from 'react';
+import * as React from 'react';
+import Navbar from './Navbar';
+import Content from './Content';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { lightTheme, darkTheme } from '../helpers/themes';
 
-function App() {
+function App(): React.Node {
   const [theme, setTheme] = React.useState(lightTheme);
   const changeTheme = React.useCallback(() => {
     setTheme(prevTheme => {
@@ -17,9 +17,9 @@ function App() {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <IconButton color="primary" onClick={changeTheme}>
-        <WbSunnyIcon />
-      </IconButton>
+      <Navbar changeTheme={changeTheme}>
+        <Content />
+      </Navbar>
     </ThemeProvider>
   );
 }
