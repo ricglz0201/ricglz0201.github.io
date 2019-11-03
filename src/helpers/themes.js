@@ -1,21 +1,18 @@
 // @flow
-import { blue, yellow} from '@material-ui/core/colors';
+import lightBlue from '@material-ui/core/colors/lightBlue';
+import amber from '@material-ui/core/colors/amber';
 import { createMuiTheme, Theme } from '@material-ui/core/styles';
 
 export const lightTheme: Theme = createMuiTheme({
   palette: {
-    primary: {
-      main: '#eeeeee'
-    },
-    secondary: blue,
+    type: 'light',
+    primary: lightBlue,
   }
 });
 
 export const darkTheme: Theme = createMuiTheme({
   palette: {
-    primary: {
-      main: '#222222'
-    },
-    secondary: yellow,
+    type: 'dark',
+    primary: amber,
   }
 });

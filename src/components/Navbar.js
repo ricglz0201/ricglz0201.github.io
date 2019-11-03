@@ -10,38 +10,31 @@ import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 type Props = {|
   changeTheme: () => void,
-  children: React.Node,
 |};
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
-    root: {
-      height: '100%',
-      backgroundColor: theme.palette.primary.main,
-    },
     toolbar: {
       flex: 1,
-      flexDirection: 'row-reverse'
+      flexDirection: 'row-reverse',
+      backgroundColor: theme.palette.background.default,
     }
   })
 );
 
-const Navbar = ({ changeTheme, children }: Props): React.Node => {
+const Navbar = ({ changeTheme }: Props): React.Node => {
   const classes = useStyles();
   return (
-    <div className={classes.root}>
-      <AppBar position="static">
-        <Toolbar className={classes.toolbar}>
-          <IconButton color="secondary" onClick={changeTheme}>
-            <WbSunnyIcon />
-          </IconButton>
-          <IconButton color="secondary" href="https://github.com/ricglz0201/ricglz0201.github.io" target="_blank">
-            <GithubIcon />
-          </IconButton>
-        </Toolbar>
-      </AppBar>
-      { children }
-    </div>
+    <AppBar position="static">
+      <Toolbar className={classes.toolbar}>
+        <IconButton color="primary" onClick={changeTheme}>
+          <WbSunnyIcon />
+        </IconButton>
+        <IconButton color="primary"href="https://github.com/ricglz0201/ricglz0201.github.io" target="_blank">
+          <GithubIcon />
+        </IconButton>
+      </Toolbar>
+    </AppBar>
   )
 };
 
