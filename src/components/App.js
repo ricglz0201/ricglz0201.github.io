@@ -3,6 +3,7 @@ import 'typeface-roboto';
 import * as React from 'react';
 import Navbar from './Navbar';
 import Content from './Content';
+import Wrapper from './Wrapper';
 import { ThemeProvider } from '@material-ui/core/styles';
 import { lightTheme, darkTheme } from '../helpers/themes';
 
@@ -17,9 +18,10 @@ function App(): React.Node {
   }, []);
   return (
     <ThemeProvider theme={theme}>
-      <Navbar changeTheme={changeTheme}>
+      <Wrapper>
+        <Navbar changeTheme={changeTheme} />
         <Content />
-      </Navbar>
+      </Wrapper>
     </ThemeProvider>
   );
 }
