@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     root: {
       padding: '1rem',
-      height: '100%',
+      height: 'calc(86% + 24px)',
     },
     paper: {
       padding: '0.8rem',

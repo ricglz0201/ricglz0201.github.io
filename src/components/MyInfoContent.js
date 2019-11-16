@@ -31,7 +31,7 @@ const MyInfoContent = () : Node => {
   return (
     <>
       <Grid container className={classes.root} spacing={3} justify="center">
-        <Grid item xs={4}>
+        <Grid item xs={10} sm={6} md={4}>
           <Avatar
             className={classes.image}
             src={my_photo}
