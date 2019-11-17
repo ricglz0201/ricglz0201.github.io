@@ -2,7 +2,7 @@
 import Avatar from '@material-ui/core/Avatar';
 import Box from '@material-ui/core/Box';
 import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton';
+import LinkIconButton from './LinkIconButton';
 import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import my_photo from '../assets/my_photo.png';
@@ -13,7 +13,18 @@ import { ReactComponent as GithubIcon } from '../assets/github-icon.svg';
 import { ReactComponent as LinkedinIcon } from '../assets/linkedin.svg';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-const useStyles = makeStyles((theme: Theme) =>
+type Style = {
+  root: {
+    padding: string,
+    height: string,
+  },
+  image: {
+    height: string,
+    width: string,
+  }
+}
+
+const useStyles = makeStyles((theme: Theme) : Style =>
   createStyles({
     root: {
       padding: '1rem',
@@ -26,49 +37,57 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
+type SectionProps = {|
+  classes: Style,
+|}
+
+const AvatarSection = ({ classes }: SectionProps) => (
+  <Grid container className={classes.root} spacing={3} justify="center">
+    <Grid item xs={10} sm={6} md={4}>
+      <Avatar
+        className={classes.image}
+        src={my_photo}
+      />
+    </Grid>
+  </Grid>
+)
+
+const BioSection = ({ classes }: SectionProps) => (
+  <Grid container className={classes.root}>
+    <Grid item xs={12}>
+      <Typography component="div">
+        <Box m={1}>
+          Junior Student from Tec de Monterrey, who is passionate in web
+          and mobile technologies. Looking for experiences in these areas,
+          or any other that challenges him.
+        </Box>
+      </Typography>
+    </Grid>
+  </Grid>
+)
+
+const SocialSection = ({ classes }: SectionProps) => (
+  <Grid container spacing={3} className={classes.root} direction="row" justify="center">
+    <Grid item>
+      <LinkIconButton href="https://github.com/ricglz0201">
+        <GithubIcon />
+      </LinkIconButton>
+    </Grid>
+    <Grid item>
+      <LinkIconButton href="https://linkedin.com/in/rjgcastillo">
+        <LinkedinIcon />
+      </LinkIconButton>
+    </Grid>
+  </Grid>
+)
+
 const MyInfoContent = () : Node => {
   const classes = useStyles();
   return (
     <>
-      <Grid container className={classes.root} spacing={3} justify="center">
-        <Grid item xs={10} sm={6} md={4}>
-          <Avatar
-            className={classes.image}
-            src={my_photo}
-          />
-        </Grid>
-      </Grid>
-      <Grid container className={classes.root}>
-        <Grid item xs={12}>
-          <Typography component="div">
-            <Box m={1}>
-              Junior Student from Tec de Monterrey, who is passionate in web
-              and mobile technologies. Looking for experiences in these areas,
-              or any other that challenges him.
-            </Box>
-          </Typography>
-        </Grid>
-      </Grid>
-      <Grid container spacing={3} className={classes.root} direction="row" justify="center">
-        <Grid item>
-          <IconButton
-            color="primary"
-            href="https://github.com/ricglz0201"
-            target="_blank"
-          >
-            <GithubIcon />
-          </IconButton>
-        </Grid>
-        <Grid item>
-          <IconButton
-            color="primary"
-            href="https://linkedin.com/in/rjgcastillo"
-            target="_blank"
-          >
-            <LinkedinIcon />
-          </IconButton>
-        </Grid>
-      </Grid>
+      <AvatarSection classes={classes} />
+      <BioSection classes={classes} />
+      <SocialSection classes={ classes } />
     </>
   )
 }

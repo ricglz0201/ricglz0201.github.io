@@ -3,6 +3,7 @@ import * as React from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Box from '@material-ui/core/Box';
 import IconButton from '@material-ui/core/IconButton';
+import LinkIconButton from './LinkIconButton';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import WbSunnyIcon  from '@material-ui/icons/WbSunny';
@@ -35,13 +36,11 @@ const Navbar = ({ changeTheme }: Props): React.Node => {
         <IconButton color="primary" onClick={changeTheme}>
           <WbSunnyIcon />
         </IconButton>
-        <IconButton
-          color="primary"
+        <LinkIconButton
           href="https://github.com/ricglz0201/ricglz0201.github.io"
-          target="_blank"
         >
           <GithubIcon />
-        </IconButton>
+        </LinkIconButton>
         <Typography className={classes.textWrapper} component="div">
           <Box fontSize="h5.fontSize" m={1} letterSpacing={6}>
             Ricardo Gonzalez
