@@ -1,10 +1,9 @@
 //@flow
 import Avatar from '@material-ui/core/Avatar';
-import Box from '@material-ui/core/Box';
+import CustomTypography from './CustomTypography';
 import Grid from '@material-ui/core/Grid';
 import LinkIconButton from './LinkIconButton';
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
 import my_photo from '../assets/my_photo.png';
 import type { Node } from 'react';
 // $FlowFixMe
@@ -54,15 +53,11 @@ const AvatarSection = ({ classes }: SectionProps) => (
 
 const BioSection = ({ classes }: SectionProps) => (
   <Grid container className={classes.root}>
-    <Grid item xs={12}>
-      <Typography component="div">
-        <Box m={1}>
-          Junior Student from Tec de Monterrey, who is passionate in web
-          and mobile technologies. Looking for experiences in these areas,
-          or any other that challenges him.
-        </Box>
-      </Typography>
-    </Grid>
+    <CustomTypography>
+      Junior Student from Tec de Monterrey, who is passionate in web
+      and mobile technologies. Looking for experiences in these areas,
+      or any other that challenges him.
+    </CustomTypography>
   </Grid>
 )
 
