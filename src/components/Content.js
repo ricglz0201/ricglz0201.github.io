@@ -1,9 +1,10 @@
 // @flow
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import MyInfoContent from './MyInfoContent';
+import Paper from '@material-ui/core/Paper';
+import WorkExperienceContent from './WorkExperienceContent';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -31,7 +32,9 @@ const Content = () : React.Node => {
         </Paper>
       </Grid>
       <Grid item xs={6}>
-        <Paper className={classes.paper}>hola</Paper>
+        <Paper className={classes.paper}>
+          <WorkExperienceContent />
+        </Paper>
       </Grid>
     </Grid>
   )
