@@ -45,14 +45,14 @@ const WorkExperience = ({
     </Typography>
   </Grid>
 )
+const fbDescription = `Work with the save and collections team in the
+                       development of new features for the product of the
+                       team, working both in the back and frontend.`
+const ukkoDescription = `Developed primarly web applications. Tooked
+                         leadership of some projects in their early stages.`
 
 const WorkExperienceContent = () : React.Node => {
   const classes = useStyles();
-  const fbDescription = `Work with the save and collections team in the
-                         development of new features for the product of the
-                         team, working both in the back and frontend.`
-  const ukkoDescription = `Developed primarly web applications. Tooked
-                           leadership of some projects in their early stages.`
   return (
     <Grid container spacing={3} className={classes.root}>
       <CustomTypography textAlign="center" fontSize="h5">
