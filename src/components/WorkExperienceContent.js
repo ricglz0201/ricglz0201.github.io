@@ -4,6 +4,7 @@ import Box from '@material-ui/core/Box';
 import CustomTypography from './CustomTypography';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import experienceData from './experienceData';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 type Style = {
@@ -48,11 +49,6 @@ const WorkExperience = ({
     </Typography>
   </Grid>
 )
-const fbDescription = `Worked with the save and collections team in the
-                       development of new features for the product of the
-                       team, working both in the back and frontend.`
-const ukkoDescription = `Developed primarily web applications. Took
-                         leadership over some projects in their early stages.`
 
 const WorkExperienceContent = () : React.Node => {
   const classes = useStyles();
@@ -61,20 +57,11 @@ const WorkExperienceContent = () : React.Node => {
       <CustomTypography textAlign="center" fontSize="h5">
         Work experience
       </CustomTypography>
-      <WorkExperience
-        city="Menlo Park, CA."
-        company="Facebook Inc."
-        description={fbDescription}
-        period="Jun - Aug 2019"
-        technologies="React, React Native, Hack (PHP), Graphql"
-      />
-      <WorkExperience
-        city="Monterrey, MEX."
-        company="Ukko Solutions"
-        period="May 2018 - Present"
-        description={ukkoDescription}
-        technologies="Ruby on Rails, JQuery, Golang, SASS, Python, Docket"
-      />
+      {
+        experienceData.map(
+          (experience, index) => <WorkExperience key={index} {...experience} />
+        )
+      }
     </Grid>
   )
 };
