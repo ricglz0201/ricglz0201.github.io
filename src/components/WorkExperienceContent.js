@@ -48,11 +48,11 @@ const WorkExperience = ({
     </Typography>
   </Grid>
 )
-const fbDescription = `Work with the save and collections team in the
+const fbDescription = `Worked with the save and collections team in the
                        development of new features for the product of the
                        team, working both in the back and frontend.`
-const ukkoDescription = `Developed primarly web applications. Tooked
-                         leadership of some projects in their early stages.`
+const ukkoDescription = `Developed primarily web applications. Took
+                         leadership over some projects in their early stages.`
 
 const WorkExperienceContent = () : React.Node => {
   const classes = useStyles();
