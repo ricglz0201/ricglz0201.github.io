@@ -39,9 +39,12 @@ const WorkExperience = ({
 }: WorkExperienceProps) => (
   <Grid item xs={12}>
     <Typography component="div">
-      <Box fontSize="h6.fontSize" fontWeight="bold">{company}</Box>
-      <Box fontWeight="lighter">{period} | {city}</Box>
-      <span>{description} Technologies used:<b> {technologies}</b></span>
+      <Grid container spacing={1}>
+        <Grid item xs={12}><Box fontSize="h6.fontSize" fontWeight="bold">{company}</Box></Grid>
+        <Grid item xs={12}><Box fontWeight="lighter">{period} | {city}</Box></Grid>
+        <Grid item xs={12}>{description}</Grid>
+        <Grid item xs={12}>Technologies used:<b> {technologies}</b></Grid>
+      </Grid>
     </Typography>
   </Grid>
 )
@@ -66,7 +69,7 @@ const WorkExperienceContent = () : React.Node => {
         technologies="React, React Native, Hack (PHP), Graphql"
       />
       <WorkExperience
-        city="Monterrey, Mex"
+        city="Monterrey, MEX."
         company="Ukko Solutions"
         period="May 2018 - Present"
         description={ukkoDescription}

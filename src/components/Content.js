@@ -26,13 +26,13 @@ const Content = () : React.Node => {
   const classes = useStyles();
   return (
     <Grid container className={classes.root} spacing={3} alignItems="center">
-      <Grid item xs={6}>
-        <Paper className={classes.paper}>
+      <Grid item xs={12} sm={6} md={4} xl={3}>
+        <Paper elevation={10} className={classes.paper}>
           <MyInfoContent />
         </Paper>
       </Grid>
-      <Grid item xs={6}>
-        <Paper className={classes.paper}>
+      <Grid item xs={12} sm={6} md={8} xl={9}>
+        <Paper elevation={10} className={classes.paper}>
           <WorkExperienceContent />
         </Paper>
       </Grid>
