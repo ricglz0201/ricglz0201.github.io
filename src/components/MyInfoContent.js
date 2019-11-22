@@ -54,9 +54,9 @@ const AvatarSection = ({ classes }: SectionProps) => (
 const BioSection = ({ classes }: SectionProps) => (
   <Grid container className={classes.root}>
     <CustomTypography>
-      Junior Student from Tec de Monterrey, who is passionate in web
+      Junior Student from Tec de Monterrey, who is passionate about web
       and mobile technologies. Looking for experiences in these areas,
-      or any other that challenges him.
+      or any other that challenge him.
     </CustomTypography>
   </Grid>
 )
