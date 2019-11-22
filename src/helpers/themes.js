@@ -19,14 +19,24 @@ export const darkTheme: Theme = createMuiTheme({
   }
 });
 
+function changeBodyBgColor(theme: Theme) {
+  const body = document.getElementsByTagName('body')[0];
+  body.style.setProperty('background-color', theme.palette.background.default)
+}
+
 type useThemeReturnType = [Theme, () => void];
 
 export const useTheme = () : useThemeReturnType => {
   const [storedValue, setStoredValue] = useLocalStorage('theme', 'light');
   const preferredTheme = storedValue === 'light' ? lightTheme : darkTheme;
   const [theme, setTheme] = useState(preferredTheme);
+  changeBodyBgColor(theme);
   const changeTheme = useCallback(() => {
-    setTheme(prevTheme => prevTheme === lightTheme ? darkTheme : lightTheme);
+    setTheme(prevTheme => {
+      const newTheme = prevTheme === lightTheme ? darkTheme : lightTheme
+      changeBodyBgColor(newTheme);
+      return newTheme;
+    });
     setStoredValue( prevValue => prevValue === 'light' ? 'dark' : 'light' );
   }, [setStoredValue]);
   return [theme, changeTheme];
