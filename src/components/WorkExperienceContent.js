@@ -5,7 +5,7 @@ import CustomTypography from './CustomTypography';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import experienceData from './experienceData';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, makeStyles } from '@material-ui/core/styles';
 
 type Style = {
   root: {
@@ -26,7 +26,7 @@ type WorkExperienceProps = {|
   technologies: string,
 |};
 
-const useStyles = makeStyles((theme: Theme) : Style =>
+const useStyles = makeStyles(() : Style =>
   createStyles({
     root: {
       padding: '1rem',
