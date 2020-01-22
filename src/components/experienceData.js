@@ -1,4 +1,4 @@
-//@flow
+//@flow strict
 const data = [{
   city: "Menlo Park, CA.",
   company: "Facebook Inc.",
@@ -13,6 +13,6 @@ const data = [{
   description: `Developed primarily web applications. Took leadership over some
                 projects in their early stages.`,
   period: "May 2018 - Present",
-  technologies: "Ruby on Rails, JQuery, Golang, SASS, Python, Docket"
+  technologies: "Ruby on Rails, JQuery, Golang, SASS, Python, Docker"
 }];
 export default data;
