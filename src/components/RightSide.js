@@ -2,6 +2,7 @@
 import * as React from 'react';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
+import ProjectsContent from './ProjectsContent';
 import WorkExperienceContent from './WorkExperienceContent';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
@@ -21,6 +22,9 @@ const RightSide = () : React.Node => {
     <Grid item xs={12} sm={8} xl={9}>
       <Paper elevation={10} className={classes.paper}>
         <WorkExperienceContent />
+      </Paper>
+      <Paper elevation={10} className={classes.paper}>
+        <ProjectsContent />
       </Paper>
     </Grid>
   )
