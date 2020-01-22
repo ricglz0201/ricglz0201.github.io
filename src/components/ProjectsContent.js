@@ -19,7 +19,7 @@ type AchievementsProps = {|
   achievements: Array<string>,
 |}
 
-type WorkExperienceProps = {|
+type ProjectProps = {|
   achievements: Array<string>,
   website: string,
   description: string,
@@ -46,8 +46,8 @@ const Achievements = ({ achievements }: AchievementsProps) => (
 );
 
 const Project = ({
-  name, period, description, technologies, achievements, demo, website
-}: WorkExperienceProps) => (
+  name, period, description, technologies, achievements, website
+}: ProjectProps) => (
   <Grid item xs={12}>
     <Typography component="div">
       <Grid container spacing={1}>
