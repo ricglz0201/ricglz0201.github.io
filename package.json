@@ -7,12 +7,10 @@
     "@loadable/component": "^5.10.3",
     "@material-ui/core": "^4.5.2",
     "@material-ui/icons": "^4.5.1",
-    "flow-bin": "^0.110.1",
     "p-min-delay": "^3.1.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-scripts": "3.2.0",
-    "source-map-explorer": "^2.1.1",
     "typeface-roboto": "^0.0.75"
   },
   "scripts": {
@@ -40,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "flow-bin": "^0.117.0",
+    "source-map-explorer": "^2.2.2"
   }
 }
