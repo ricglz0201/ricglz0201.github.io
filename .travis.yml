@@ -8,7 +8,7 @@ cache:
   directories:
   - node_modules
 install:
-  - yarn
+  - yarn install --ignore-engines
 script:
   - yarn lint
   - yarn flow
