@@ -30,8 +30,8 @@ const useStyles = makeStyles((theme: Theme) : Style =>
       height: '100%',
     },
     image: {
-      height: 'auto',
-      width: '100%',
+      width: '170px',
+      height: '170px',
     }
   })
 );
@@ -42,12 +42,10 @@ type SectionProps = {|
 
 const AvatarSection = ({ classes }: SectionProps) => (
   <Grid container className={classes.root} spacing={3} justify="center">
-    <Grid item xs={10} sm={6} md={4}>
-      <Avatar
-        className={classes.image}
-        src={my_photo}
-      />
-    </Grid>
+    <Avatar
+      className={classes.image}
+      src={my_photo}
+    />
   </Grid>
 )
 
