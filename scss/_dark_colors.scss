@@ -1,0 +1,12 @@
+$background-color: #222;
+$primary-color: #ddd;
+$secondary-color: #aaa;
+
+$theme: (
+  backgroundColor: $background-color,
+  textColor: $primary-color,
+  buttonTextColor: $secondary-color,
+  buttonTextHoverColor: $primary-color,
+  buttonColor: $background-color,
+  buttonBorder: 1px solid $secondary-color,
+)
