@@ -1,46 +1,14 @@
 {
-  "name": "portfolio",
-  "homepage": "https://ricglz0201.github.io",
-  "version": "0.1.0",
-  "private": true,
+  "name": "ricglz0201.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "repository": "https://github.com/ricglz0201/ricglz0201.github.io.git",
+  "author": "Ricardo J González C <rjgcastillo@hotmail.com>",
+  "license": "MIT",
   "dependencies": {
-    "@loadable/component": "^5.10.3",
-    "@material-ui/core": "^4.5.2",
-    "@material-ui/icons": "^4.5.1",
-    "p-min-delay": "^3.1.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0",
-    "typeface-roboto": "^0.0.75"
+    "sass": "^1.26.10"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src/*.js src/**/*.js",
-    "flow": "flow",
-    "analyse": "source-map-explorer build/static/js/main.*"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "flow-bin": "^0.117.0",
-    "source-map-explorer": "^2.2.2"
+    "sass": "sass --watch --style compressed pre-compiled:public"
   }
 }
